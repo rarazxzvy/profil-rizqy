@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Rizqy Mutiara</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: linear-gradient(to right, #cb8cc3, #524e4e);
+      color: #e1e1e1;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1rem;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      box-shadow: 0 0 20px #ffb6b9;
+      animation: pulse 2.5s infinite;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-top: 1rem;
+      text-shadow: 0 0 10px #df86bb, 0 0 10px #b59cb5, 0 0 20px #dca9c9, 0 0 40px #be6da6;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      color: #321926;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .grid-two {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .box {
+      background-color: rgba(145, 73, 124, 0.6);
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0 25px rgba(251, 251, 251, 0.2);
+      transition: transform 0.3s ease;
+      margin-bottom: 2.5rem;
+    }
+
+    .box:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+      color: #e7e1e1;
+      font-size: 1rem;
+    }
+
+    .skills span {
+      display: inline-block;
+      background-color: #51484d;
+      color: #ffffff;
+      padding: 0.5rem 1rem;
+      margin: 0.3rem;
+      border-radius: 1.5rem;
+      font-size: 0.9rem;
+      box-shadow: 0 0 8px rgba(155, 132, 155, 0.3);
+    }
+
+    .portfolio img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(158, 76, 199, 0.2);
+      margin-top: 1rem;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio img:hover {
+      transform: scale(1.03);
+    }
+
+    .contact a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #beb7bd;
+      transition: color 0.3s ease-in-out;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #7a787d;
+    }
+
+    .org-cards {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1rem;
+      border-radius: 1rem;
+      min-width: 200px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 0.5rem;
+      color: #950404;
+    }
+
+    .card small {
+      font-size: 0.8rem;
+      color: #717171;
+    }
+
+    .card p {
+      color: #da117f;
+    }
+
+    .social-btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      margin: 0.4rem 0.5rem 0 0;
+      background-color: #555;
+      color: white;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .social-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .social-btn.instagram {
+      background-color: #e1306c;
+    }
+
+    .social-btn.instagram:hover {
+      background-color: #c72c61;
+    }
+
+    .social-btn.github {
+      background-color: #24292e;
+    }
+
+    .social-btn.github:hover {
+      background-color: #1b1f23;
+    }
+
+    .social-btn.whatsapp {
+      background-color: #25D366;
+    }
+
+    .social-btn.whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 0 20px #000000;
+      }
+      50% {
+        box-shadow: 0 0 35px #514e50;
+      }
+    }
+
+.card-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+.award-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  margin-top: 1rem;
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="mutii.jpg" alt="Foto Rizqy Mutiara">
+    <h1>Rizqy Mutiara</h1>
+    <p>Information Systems Student | UI/UX | IMM Activist</p>
+  </header>
+
+  <main>
+    <div class="grid-two">
+      <section class="box bio">
+        <h2>👩‍🎓 Biodata</h2>
+        <ul>
+          <li><strong>Nama:</strong> Rizqy Mutiara</li>
+          <li><strong>Tempat, Tanggal Lahir:</strong> Medan, 2 Desember 2004</li>
+          <li><strong>Jenis Kelamin:</strong> Perempuan</li>
+          <li><strong>Status:</strong> Mahasiswi Aktif UMSU - Sistem Informasi (Angkatan 2023)</li>
+          <li><strong>Alamat:</strong> Jl. Rawa Cangkuk I Gg. Sapta</li>
+          <li><strong>No. HP:</strong> 0852-7082-4872</li>
+          <li><strong>Email:</strong> <a href="mailto:rizqymutiara33@gmail.com">rizqymutiara33@gmail.com</a></li>
+        </ul>
+      </section>
+
+      <section class="box about">
+        <h2>✨ About Me</h2>
+        <p>
+          Saya dikenal sebagai pribadi yang komunikatif, kreatif, dan adaptif terhadap perubahan. Aktif di berbagai kegiatan organisasi, saya terbiasa mengambil peran penting dalam perencanaan program, desain komunikasi, dan pelaksanaan kegiatan. Minat saya pada desain digital, pengembangan antarmuka pengguna, dan public speaking mendorong saya untuk terus berkembang dan menciptakan karya yang berdampak. Saya percaya bahwa setiap pengalaman adalah kesempatan untuk belajar. Oleh karena itu, saya senang terlibat dalam proyek-proyek kolaboratif yang menantang dan memberi ruang untuk eksplorasi ide baru. 
+        </p>
+      </section>
+    </div>
+
+    <section class="box skills">
+      <h2>🛠 Skill</h2>
+      <div>
+        <span>Java</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Canva</span>
+        <span>Python</span>
+        <span>Leadership</span>
+        <span>Organizing</span>
+      </div>
+    </section>
+
+    <section class="box portfolio">
+      <h2>📁 Portofolio</h2>
+      <p>Berikut ini adalah beberapa karya sederhana yang mencerminkan proses belajar dan eksplorasi saya dalam dunia digital dan organisasi:</p>
+      <ul>
+        <li><strong>Desain Poster & Konten IMM:</strong> Menggunakan Canva untuk publikasi kegiatan IMM FIKTI UMSU.</li>
+        <li><strong>Mockup Aplikasi "Ngaji Yuk!":</strong> Antarmuka edukasi islami anak-anak.</li>
+        <li><strong>Website Profil Organisasi IMM:</strong> Landing page berbasis HTML & CSS.</li>
+      </ul>
+    </section>
+
+    <section class="box">
+      <h2>Student Activities</h2>
+      <ul>
+        <li>👋 PKKMB UMSU — Peserta (25–26 Sep 2023)</li>
+        <li>🤝 MASTA UMSU — Peserta (28–29 Sep 2023)</li>
+        <li>📖 DAD IMM UNIMED — Peserta (19–22 Okt 2023)</li>
+        <li>🕊 Aksi Bela Palestina IMM — Peserta (10 Nov 2023)</li>
+        <li>🧠 BAM FIKTI UMSU — Peserta (10–11 Des 2023)</li>
+        <li>📌 Ta’aruf PK IMM — Ketua Panitia (26 Sep 2024)</li>
+        <li>📋 Pelatihan Administrasi IMM — Ketua Panitia (2–3 Nov 2024)</li>
+        <li>🏛 Musyawarah Komisariat III IMM — Ketua Panitia (21–22 Des 2024)</li>
+      </ul>
+    </section>
+
+    <section class="box">
+  <h2>🏆 Award</h2>
+  <img src="kapal.jpg" alt="Penghargaan BPTI 2024" class="award-img">
+  <ul style="margin-top:1rem;">
+    <li>🚢 Pendanaan Kontes Kapal Indonesia — Balai Pengembangan Talenta Indonesia (BPTI) — 2024</li>
+  </ul>
+</section>
+
+
+    <section class="box organisasi">
+  <h2>🧠 Organizational Experience</h2>
+  <div class="org-cards">
+    <div class="card">
+      <img class="card-img" src="bigor.jpg" alt="Ketua Bidang Organisasi">
+      <h3>IMM FIKTI UMSU</h3>
+      <p>Ketua Bidang Organisasi<br><small>2023/2024</small></p>
+    </div>
+    <div class="card">
+      <img class="card-img" src="sekum.jpg" alt="Sekretaris Umum">
+      <h3>IMM FIKTI UMSU</h3>
+      <p>Sekretaris Umum<br><small>2024/2025</small></p>
+    </div>
+  </div>
+</section>
+
+
+
+    <section class="box">
+      <h2>Hobbies and Interests</h2>
+      <ul>
+        <li>🎨 Mendesain poster & konten digital</li>
+        <li>🗣 Public speaking & MC kegiatan kampus</li>
+        <li>💻 Eksplorasi frontend & UI/UX</li>
+        <li>📖 Baca buku self-improvement</li>
+        <li>🤝 Berorganisasi & membangun tim</li>
+      </ul>
+    </section>
+
+    <section class="box contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:rizqymutiara33@gmail.com">rizqymutiara33@gmail.com</a></p>
+      <a href="https://instagram.com/rizqy.mtraa_" class="social-btn instagram" target="_blank">📷 Instagram</a>
+      <a href="https://github.com/raraaproject" class="social-btn github" target="_blank">🐙 GitHub</a>
+      <a href="https://wa.me/6285270824872" class="social-btn whatsapp" target="_blank">💬 WhatsApp</a>
+      <div style="margin-top:1rem;">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Rizqy Mutiara . Dibuat dengan HTML & CSS
+  </footer>
+
+</body>
+</html>
